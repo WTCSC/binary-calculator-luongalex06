@@ -3,17 +3,20 @@ def binary_calculator(bin1, bin2, operator):
     number2 = 0
     total = 0
 
-    # makes sure that the binary is digits and not something random like letters
-    if not bin1.isdigit() or not bin2.isdigit():
-        return 'Error'
+ 
+
     
     # converts bin1 to decimal
     for place, digit in enumerate(bin1[::-1]):
+        if digit != '1' and digit != '0':
+            return 'Error'
         if digit == '1':
             number += 2 ** place
     
     # converts bin2 to decimal
     for place2, digit2 in enumerate(bin2[::-1]):
+        if digit2 != '1' and digit2 != '0':
+            return 'Error'
         if digit2 == '1':
             number2 += 2 ** place2
 
@@ -51,7 +54,7 @@ def binary_calculator(bin1, bin2, operator):
     return end
             
 
-        
+       
 print(binary_calculator("1010", "1010", "+"))  # Should return "00010100"
 print(binary_calculator("1100", "0011", "-"))  # Should return "00001001"
 print(binary_calculator("1010", "0000", "/"))  # Should return "NaN"
