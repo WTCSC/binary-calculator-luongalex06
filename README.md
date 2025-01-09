@@ -1,24 +1,13 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17649952)
 # Binary Calculator
 
-<!--
 
-The following requirements must be met to receive full credit on this assignment. The calculator must handle binary arithmetic operations accurately while following proper error handling procedures and output formatting guidelines.
+        The Binary Calculator allows the user to input two binary numbers into the function, while also letting them choose the the operator as well. The Calculator will change both binary numbers into decimal numbers, add/subtract/divide/multiply them together, and convert it back into a binary number. The calculator and also figure out if the numbers would overflow the binary, or if the binary number is not all digits (ex. 10akd1), or if the you are dividing by zero which it will give you 'Error' 
 
-- Your solution must have a well-written and thorough README file.
-- The solution must be implemented as a function called `binary_calculator()` with three parameters:
-    - `bin1` - A string parameter representing the first binary number to be used in the calculation. Must contain only 0s and 1s.
-    - `bin2` - A string parameter representing the second binary number to be used in the calculation. Must contain only 0s and 1s.
-    - `operator` - A string containing one of the following arithmetic operators: `'+'`, `'-'`, `'*'`, or `'/'`
-- Do not use Python's built-in `bin()` function.
-- Implement your own binary-to-decimal and decimal-to-binary conversion logic.
-- All binary inputs and outputs should be strings.
-- Handle division by zero by returning `"NaN"`
-- Handle decimal numbers by rounding down to the nearest whole number (flooring).
-- Return `"Error"` for invalid binary inputs (containing characters other than `0` and `1`)
-- Return `"Overflow"` for any operations that overflow (i.e. negative numbers, numbers greater than 8-bits).
-- Outputs must be returned as 8-bit numbers (padded with leading zeros if necessary). For example, the decimal number `5` should be returned as `"00000101"` .
+    Plug ins:
+        bin1: The first binary number as a string (it should only have 0s and 1s).
+        bin2: The second binary number as a string (it should only have 0s and 1s).
+        operator: The math symbol ('+', '-', '*', '/').
 
-Your solution will be tested against various test cases including edge cases, invalid inputs, and all four arithmetic operations.
-
- -->
+    Example:
+        For example, if I plug in 1010 (10), 0110 (6), and "-", the code should convert the first binary to 10, second binary to 6, and subtract the two, it would get 4. Then it would translate it back into binary in 8-bit (00000100).
